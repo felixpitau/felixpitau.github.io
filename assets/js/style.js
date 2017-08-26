@@ -16,7 +16,7 @@ function onLoadResize() {
 	stage.removeChildren();
   
 	stars = [];
-	starCount = Math.floor((window.innerWidth * window.innerHeight) / 5000);
+	starCount = Math.floor((window.innerWidth * window.innerHeight) / 4000);
 	
 	for (var i = 0; i < starCount; i++) {
 		var star = new PIXI.Graphics();
@@ -32,6 +32,10 @@ function onLoadResize() {
 		stars.push(star);
 		stage.addChild(star);
 	}
+}
+
+function onOneSecond() {
+  document.body.removeAttribute('class');
 }
 
 app.ticker.add(function(delta) {
@@ -52,6 +56,7 @@ window.onload = function() {
 	document.body.appendChild(view);
   centerPiece = document.getElementById('center-piece');
 	onLoadResize();
+  setTimeout(onOneSecond, 900);
 };
 
 window.onresize = function () {

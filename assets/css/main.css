@@ -1,10 +1,23 @@
 body {
 	background: #222236;
+	color: #EEF;
 	margin: 0;
 	padding: 0;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
+	font-family: Roboto;
+}
+
+a {
+	color: #EEF;
+	text-decoration: none;
+	line-height: 100%;
+}
+
+a:hover {
+	background: rgba(255, 255, 255, 0.2);
+	color: white;
 }
 
 #main {
@@ -18,17 +31,126 @@ body {
   position: absolute;
   width: 30vw;
   left: 35vw;
-  font-family: roboto;
+  font-family: Roboto;
   font-size: 2.6vw;
-  text-align: center;
+  text-align: left;
   vertical-align: middle;
-  color: #EEF;
+	overflow: hidden;
 }
 
 .quote-by {
   font-size: 1.6vw;
   text-align: right;
 	font-style: italic;
+	margin-right: 3px;
+}
+
+#center-piece div {
+  transition: top ease 3s;
+  position: relative;
+	top: 0;
+}
+
+.out .quote {
+  top: -200px !important;
+}
+
+.out .quote-by {
+  top: 200px !important;
+}
+
+#logo, nav {
+	position: absolute;
+	margin: 40px;
+	overflow: hidden;
+	top: 0;
+	transition: top ease 2s;
+}
+
+.out #logo, .out nav {
+	top: -100px;
+}
+
+#logo {
+	left: 0;
+}
+
+#logo .img {
+	float: left;
+	overflow: hidden;
+}
+
+#logo img {
+	position: relative;
+	width: 80px;
+	transition: left ease 3s;
+	left: 0;
+}
+
+.out #logo img {
+	left: 100px;
+}
+
+#logo a {
+	float: left;
+	display: inline-block;
+	clear: both;
+	color: #EEF;
+	font-size: 20px;
+	margin: 5px;
+	text-decoration: none;
+	line-height: 100%;
+	transition: margin-left ease 3s;
+}
+
+.out #logo a {
+	margin-left: -300px;
+}
+
+nav {
+	position: absolute;
+	right: 0;
+}
+
+nav .item {
+	padding: 25px;
+	float: left;
+	display: inline-block;
+	font-size: 25px;
+	cursor: pointer;
+	position: relative;
+	left: 0;
+	transition: left ease 3s;
+}
+
+.out nav .item {
+	left: -400px;
+}
+
+nav .item:hover {
+	background: none;
+}
+
+nav .item .underline {
+	height: 2px;
+	background: white;
+	width: 0;
+	margin: 5px auto;
+	transition: width ease 0.3s;
+}
+
+nav .item.active .underline {
+	width: 25%;
+}
+
+nav .item:hover .underline {
+	width: 100%;
+}
+
+.links {
+  float: right;
+  padding: 10px 20px;
+	overflow: hidden;
 }
 
 @media screen and (max-width: 1200px) {
@@ -39,5 +161,22 @@ body {
 	}
 	.quote-by {
     font-size: 3.2vw;
+	}
+}
+
+@media screen and (max-width: 750px) {
+  nav .item {
+		padding: 10px;
+		font-size: 20px;
+		line-height: 90%;
+	}
+	
+	#logo, nav {
+		margin: 30px;
+	}
+	
+	nav {
+		transition: none;
+		top: 20px;
 	}
 }
