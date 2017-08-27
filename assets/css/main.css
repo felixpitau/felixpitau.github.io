@@ -153,23 +153,6 @@ nav .item:hover .underline {
 	overflow: hidden;
 }
 
-.view {
-	left: 0;
-	top: 0;
-	position: absolute;
-	transition: left ease 0.4s;
-}
-
-.view-away.view-home,
-.view-away.view-about {
-	left: -100vw;
-}
-
-.view-away.view-work,
-.view-away.view-contact {
-	left: 100vw;
-}
-
 @media screen and (max-width: 1200px) {
   #center-piece {
     width: 60vw;
