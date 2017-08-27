@@ -38,6 +38,10 @@ function onOneSecond() {
   document.body.removeAttribute('class');
 }
 
+function setView(viewName) {
+  
+}
+
 app.ticker.add(function(delta) {
 	for (var i = 0; i < stars.length; i++) {
 		var star = stars[i];
