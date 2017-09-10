@@ -3,7 +3,8 @@ body {
 	color: #EEF;
 	margin: 0;
 	padding: 0;
-	width: 100%;
+	width: 100vw;
+	max-width: 100vw;
 	height: 95vh;
 	overflow-x: hidden;
 	overflow-y: scroll;
@@ -92,6 +93,8 @@ canvas {
 	top: 0;
 	transition: top ease 2s;
 	z-index: 200;
+	-moz-user-select: none;
+	-webkit-user-select: none;
 }
 
 .out #logo, .out nav {
@@ -190,14 +193,8 @@ nav .item:hover .underline {
 	transition: left ease 0.4s;
 }
 
-.view-away.view-home,
-.view-away.view-about {
+.view-away {
 	left: -100vw;
-}
-
-.view-away.view-work,
-.view-away.view-contact {
-	left: 100vw;
 }
 
 .header-margin {
