@@ -39,7 +39,16 @@ function onOneSecond() {
 }
 
 function setView(viewName) {
-  
+  var viewItems = document.querySelectorAll('.view');
+  var navItems = document.querySelectorAll('nav .item');
+  viewItems.forEach( (val) => {
+    val.classList.add('view-away');
+  });
+  navItems.forEach( (val) => {
+    val.classList.remove('active');
+  });
+  document.querySelector('nav .item.item-' + viewName).classList.add('active');
+  document.querySelector('.view.view-' + viewName).classList.remove('view-away');
 }
 
 app.ticker.add(function(delta) {
@@ -59,6 +68,11 @@ app.ticker.add(function(delta) {
 window.onload = function() {
 	document.body.appendChild(view);
   centerPiece = document.getElementById('center-piece');
+  
+  document.querySelector('nav .item.item-about').addEventListener('click', () => {setView('about')});
+  document.querySelector('nav .item.item-work').addEventListener('click', () => {setView('work')});
+  document.querySelector('nav .item.item-contact').addEventListener('click', () => {setView('contact')});
+  
 	onLoadResize();
   setTimeout(onOneSecond, 900);
 };
