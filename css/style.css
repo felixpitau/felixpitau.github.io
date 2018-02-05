@@ -29,6 +29,12 @@ section {
   /*clip-path: inset(1px);*/
 }
 
+section hr {
+  max-width: 885px;
+  border: solid 3px #E83444;
+  border-radius: 5px;
+}
+
 section .clipmask {
   clip-path: inset(2px);
   position: absolute;
@@ -54,6 +60,14 @@ section p {
   margin: 0 auto 22px;
 }
 
+span.small {
+  font: italic 0.8em/100% Barlow;
+  display: inline-block;
+  position: relative;
+  border-bottom: solid 0.1em;
+  top: -0.22em;
+}
+
 .littlelogo {
   width: 50px;
   height: 50px;
@@ -74,6 +88,31 @@ section.start {
 
 }
 
+.scroll {
+  background: #E8E0E022;
+  color: #EEE8;
+  padding: 8px;
+  margin: 5px;
+  border-radius: 3px;
+  display: block;
+  position: absolute;
+  left: calc(50% - 100px);
+  top: calc(100vh - 80px);
+  width: 200px;
+  font: normal 18px/160% Barlow;
+  text-align: center;
+}
+
+.work-in-progress {
+  border: solid 2px #F83444;
+  max-width: 1000px;
+  padding: 12px;
+  margin: 5px auto;
+  border-radius: 3px;
+  font: bold 18px/160% Barlow;
+  text-align: center;
+}
+
 section.start canvas {
   top: 0;
   position: fixed;
@@ -81,23 +120,171 @@ section.start canvas {
   z-index: -200;
 }
 
+/*
+background: repeating-radial-gradient(
+  circle at center,
+  transparent,
+  transparent 10px,
+  #E8E8E8 10px,
+  #E8E8E8 14px,
+  transparent 14px,
+  transparent 30px
+),
+repeating-radial-gradient(
+  circle at center,
+  transparent,
+  transparent 6px,
+  #EEE 6px,
+  #EEE 18px,
+  transparent 18px,
+  transparent 30px
+),
+repeating-linear-gradient(
+  40deg,
+  #E8E8E8,
+  #E8E8E8 2px,
+  transparent 2px,
+  transparent 32px
+),
+#EEE;
+*/
+
+section.status {
+  min-height: auto;
+  background:
+  radial-gradient(
+    circle at center,
+    #88111100,
+    #881111AA
+  ),
+  repeating-radial-gradient(
+    circle at center,
+    transparent,
+    transparent 10px,
+    #88143420 10px,
+    #88143420 14px,
+    transparent 14px,
+    transparent 30px
+  ),
+  #E83444;
+  background-attachment: fixed;
+  color: white;
+}
+
+section.status div {
+  font: bold 30px/100% Barlow;
+  text-align: center;
+  display: block;
+}
+
 section.about {
-  background: #EEE;
+  min-height: auto;
+  background:
+  radial-gradient(
+    circle at left center,
+    #EEE0E000, #EEE3E0AA
+  ),
+  repeating-radial-gradient(
+    circle at right top,
+    transparent,
+    transparent 10px,
+    #E0E0E033 10px,
+    #E0E0E033 14px,
+    transparent 14px,
+    transparent 30px
+  ),
+  repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 13px,
+    #EEE 13px,
+    #EEE 113px,
+    transparent 113px,
+    transparent 120px
+  ),
+  repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 14px,
+    #EEE 14px,
+    #EEE 113px,
+    transparent 113px,
+    transparent 120px
+  ),
+  repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    #D9D9D9 2px,
+    #D9D9D9 4px,
+    transparent 4px,
+    transparent 120px
+  ),
+  repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 2px,
+    #D9D9D9 2px,
+    #D9D9D9 4px,
+    transparent 4px,
+    transparent 120px
+  ),
+  #EEE;
+  background-attachment: fixed;
   color: #111;
+}
+
+section.about .padding {
+  padding: 40px 30px 80px 30px;
 }
 
 section.work {
   background: repeating-linear-gradient(
-    40deg,
-    #222,
-    #222 12px,
-    #090909 12px,
-    #090909 24px
+    106deg,
+    #090909,
+    #090909 8px,
+    transparent 8px,
+    transparent 24px
+  ),
+  repeating-linear-gradient(
+    16deg,
+    #1F1F1F,
+    #1F1F1F 2px,
+    #090909 2px,
+    #090909 200px
   );
+  background-attachment: fixed;
 }
 
 section.contact {
 
+}
+
+.items {
+  font: normal 22px/160% Barlow;
+  max-width: 900px;
+  margin: auto;
+}
+
+.items .item {
+  background: #E83444;
+  color: #EEE;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.items .item.lang {
+  background: #999;
+}
+
+.items .item.lib {
+  background: #F86474;
+}
+
+.items .item.skill {
+  background: #E83444;
 }
 
 .columns {
