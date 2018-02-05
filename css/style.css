@@ -27,6 +27,7 @@ section {
   padding: 0;
   z-index: 2;
   /*clip-path: inset(1px);*/
+  overflow: hidden;
 }
 
 section hr {
@@ -85,7 +86,7 @@ span.small {
 }
 
 section.start {
-
+  padding-top: 80px;
 }
 
 .scroll {
@@ -257,7 +258,7 @@ section.work {
 }
 
 section.contact {
-
+  min-height: auto;
 }
 
 .items {
@@ -470,6 +471,18 @@ header.black nav.logo a {
 		margin: 15px;
 		position: absolute;
 	}
+
+  .contact table th,
+  .contact table td {
+    width: 100%;
+    text-align: center;
+    float: left;
+  }
+
+  .contact table th span,
+  .contact table td a {
+    float: none;
+  }
 
   /*
 	nav.logo {
