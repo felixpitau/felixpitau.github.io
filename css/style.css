@@ -105,7 +105,9 @@ section.start {
 }
 
 .work-in-progress {
-  border: solid 2px #F83444;
+  border: solid 2px #E8E444;
+  color: #E8E444;
+  background: #222A;
   max-width: 1000px;
   padding: 12px;
   margin: 5px auto;
