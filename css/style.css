@@ -85,8 +85,77 @@ span.small {
   background: black;
 }
 
+@keyframes orb-colors { from { transform: rotate(0deg) } to { transform: rotate(360deg) }}
+
+#diamond {
+  position: absolute;
+  width: 60vmin;
+  height: 60vmin;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  overflow: hidden;
+  background: repeating-radial-gradient(
+    circle at center,
+    transparent,
+    transparent 10px,
+    #FFF4 10px,
+    #FFF4 14px,
+    transparent 14px,
+    transparent 30px
+  ),
+  repeating-radial-gradient(
+    circle at top left,
+    transparent,
+    transparent 10px,
+    #FFF1 10px,
+    #FFF1 14px,
+    transparent 14px,
+    transparent 30px
+  ),
+  repeating-radial-gradient(
+    circle at bottom right,
+    transparent,
+    transparent 10px,
+    #FFF1 10px,
+    #FFF1 14px,
+    transparent 14px,
+    transparent 30px
+  );
+}
+
+#orb {
+  position: absolute;
+  width: 10vmin;
+  height: 10vmin;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5vmin;
+  overflow: hidden;
+}
+
+#orb .colors {
+  background:
+    repeating-radial-gradient(
+      circle at top left,
+      transparent,
+      transparent 10px,
+      #DDD 10px,
+      #DDD 14px,
+      transparent 14px,
+      transparent 30px
+    ),
+    #FFF;
+  position: relative;
+  margin: -15vmin 0 0 -15vmin;
+  width: 100vmin;
+  height: 100vmin;
+  animation: 10s linear 0s infinite normal orb-colors;
+}
+
 section.start {
-  padding-top: 80px;
+
 }
 
 .scroll {
@@ -175,7 +244,7 @@ section.status {
 }
 
 section.status div {
-  font: bold 30px/100% Barlow;
+  font: bold 24px/100% Barlow;
   text-align: center;
   display: block;
 }
@@ -278,15 +347,15 @@ section.contact {
   display: inline-block;
 }
 
-.items .item.lang {
+.items .item.low {
   background: #999;
 }
 
-.items .item.lib {
+.items .item.mid {
   background: #F86474;
 }
 
-.items .item.skill {
+.items .item.high {
   background: #E83444;
 }
 

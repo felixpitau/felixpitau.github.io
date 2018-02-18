@@ -18,13 +18,13 @@ function onLoadResize() {
 	stars = [];
 	starCount = Math.floor((window.innerWidth * window.innerHeight) / 4000);
 
-	for (var i = 0; i < starCount; i++) {
-		var star = new PIXI.Graphics();
+	for (let i = 0; i < starCount; i++) {
+		let star = new PIXI.Graphics();
 		star.lineStyle(0);
 		star.beginFill(0xFFFFFF, (Math.random() * 0.8) + 0.2);
 		star.drawCircle(0, 0, 10);
 		star.endFill();
-		var scale = 0.08 + (Math.random() * 0.11);
+		let scale = 0.08 + (Math.random() * 0.11);
 		star.scale.x = scale;
 		star.scale.y = scale;
 		star.x = Math.floor(Math.random() * width);
@@ -39,8 +39,8 @@ function onOneSecond() {
 }
 
 function setView(viewName) {
-  var viewItems = document.querySelectorAll('.view');
-  var navItems = document.querySelectorAll('nav .item');
+  let viewItems = document.querySelectorAll('.view');
+  let navItems = document.querySelectorAll('nav .item');
   viewItems.forEach( (val) => {
     val.classList.add('view-away');
   });
@@ -52,8 +52,8 @@ function setView(viewName) {
 }
 
 app.ticker.add(function(delta) {
-	for (var i = 0; i < stars.length; i++) {
-		var star = stars[i];
+	for (let i = 0; i < stars.length; i++) {
+		let star = stars[i];
 		star.y += (star.scale.x * 3.2) - 0.4;
 		star.alpha = 0.5 + (Math.random() * 0.5);
 		if (star.y > height + 10) {
