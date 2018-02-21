@@ -95,12 +95,13 @@ span.small {
   top: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
   overflow: hidden;
+  background: rgba(0, 0, 0, 0.08);
   background: repeating-radial-gradient(
     circle at center,
     transparent,
     transparent 10px,
-    #FFF4 10px,
-    #FFF4 14px,
+    #0004 10px,
+    #0004 14px,
     transparent 14px,
     transparent 30px
   ),
@@ -108,8 +109,8 @@ span.small {
     circle at top left,
     transparent,
     transparent 10px,
-    #FFF1 10px,
-    #FFF1 14px,
+    #0001 10px,
+    #0001 14px,
     transparent 14px,
     transparent 30px
   ),
@@ -117,8 +118,8 @@ span.small {
     circle at bottom right,
     transparent,
     transparent 10px,
-    #FFF1 10px,
-    #FFF1 14px,
+    #0001 10px,
+    #0001 14px,
     transparent 14px,
     transparent 30px
   );
@@ -138,7 +139,7 @@ span.small {
 #orb .colors {
   background:
     repeating-radial-gradient(
-      circle at top left,
+      circle at top center,
       transparent,
       transparent 10px,
       #DDD 10px,
@@ -148,10 +149,29 @@ span.small {
     ),
     #FFF;
   position: relative;
-  margin: -15vmin 0 0 -15vmin;
+  margin: -13.5vmin 0 0 -13.5vmin;
   width: 100vmin;
   height: 100vmin;
-  animation: 10s linear 0s infinite normal orb-colors;
+  animation: 20s linear 0s infinite normal orb-colors;
+}
+
+#start-text {
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    top: calc(50% - 3px);
+    transform: translate(-50%, -50%);
+}
+
+#start-text span {
+    padding: 0 5px;
+    color: #222;
+    background: #E83444;
+    font-weight: bold;
+}
+
+#start-text p {
+    margin: 12vmin 0;
 }
 
 section.start {
@@ -222,7 +242,9 @@ repeating-linear-gradient(
 */
 
 section.status {
+  min-height: 100px;
   min-height: auto;
+  background: #E83444;
   background:
   radial-gradient(
     circle at center,
@@ -250,7 +272,9 @@ section.status div {
 }
 
 section.about {
+  min-height: 100px;
   min-height: auto;
+  background: #EEE;
   background:
   radial-gradient(
     circle at left center,
