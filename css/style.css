@@ -1,5 +1,6 @@
 body {
-  background: #090909;
+  /*background: #090909;*/
+  background: #222;
   color: #EEE;
   margin: 0;
   padding: 0;
@@ -67,6 +68,16 @@ span.small {
   position: relative;
   border-bottom: solid 0.1em;
   top: -0.22em;
+}
+
+.rows {
+    width: 100%;
+    background: rgba(255, 0, 0, 0.2);
+}
+
+.row {
+    min-height: 300px;
+    border: solid 2px white;
 }
 
 .littlelogo {
@@ -203,6 +214,34 @@ section.start {
   border-radius: 3px;
   font: bold 18px/160% Barlow;
   text-align: center;
+}
+
+.github-mini-banner {
+  max-width: 1000px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 3px;
+  color: #222;
+  padding: 30px 0;
+}
+
+.github-mini-link {
+  width: 280px;
+  margin: auto;
+  display: block;
+  font: bold 24px/100% Barlow;
+  cursor: pointer;
+  color: #222;
+  text-decoration: none;
+}
+
+.github-mini-link img {
+  width: 50px;
+}
+
+.github-mini-link span {
+  display: inline-block;
+  transform: translate(0, -16px);
 }
 
 section.start canvas {
@@ -383,6 +422,24 @@ section.contact {
   background: #E83444;
 }
 
+.items a.item.low {
+  background: rgba(0, 0, 0, 0);
+  color: #999;
+  font-weight: bold;
+}
+
+.items a.item.mid {
+  background: rgba(0, 0, 0, 0);
+  color: #F86474;
+  font-weight: bold;
+}
+
+.items a.item.high {
+  background: rgba(0, 0, 0, 0);
+  color: #E83444;
+  font-weight: bold;
+}
+
 .columns {
   -webkit-column-count: 3;
   -moz-column-count: 3;
@@ -539,6 +596,14 @@ header.black nav.logo a {
     max-width: 1000px;
     margin: 0.83em auto;
     display: block;
+  }
+
+  .github-mini-banner {
+    width: 100%;
+    margin: 0;
+    padding: 30px;
+    transform: translate(-30px, 0);
+    border-radius: 0;
   }
 }
 
